@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/numer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pytanie"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"/>
+
+    <ProgressBar
+        android:id="@+id/progres"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:max="100"
+        android:progress="60"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/pytanie"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:text="test"
+        android:padding="10dp"
+        android:textSize="20sp"
+        android:background="#D3D3D3"
+        android:gravity="center" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/kard"
+        android:layout_marginTop="50dp"
+        android:layout_width="300dp"
+        android:layout_height="350dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/rounded_corner">
+
+
+        <TextView
+            android:id="@+id/gratulejszyn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:layout_gravity="center_horizontal"
+            android:text="Twój wynik:"
+            android:gravity="center"
+            android:textSize="20sp"/>
+
+
+        <RadioGroup
+            android:id="@+id/gruparadio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible">
+
+
+
+            <RadioButton
+                android:id="@+id/odp1"
+                android:layout_width="280dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:background="#D3D3D3"
+                android:paddingLeft="20dp"
+                android:textSize="20dp"
+                android:text="odp1"
+                android:textStyle="bold"
+                android:layout_marginTop="40dp"
+                android:visibility="visible"/>
+
+            <RadioButton
+                android:id="@+id/odp2"
+                android:layout_width="280dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:background="#D3D3D3"
+                android:paddingLeft="20dp"
+                android:textSize="20dp"
+                android:text="odp2"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:visibility="visible"/>
+
+            <RadioButton
+                android:id="@+id/odp3"
+                android:layout_width="280dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:background="#D3D3D3"
+                android:paddingLeft="20dp"
+                android:textSize="20dp"
+                android:text="odp3"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:visibility="visible"/>
+
+            <RadioButton
+                android:id="@+id/odp4"
+                android:layout_width="280dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:background="#D3D3D3"
+                android:paddingLeft="20dp"
+                android:textSize="20dp"
+                android:text="odp4"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:visibility="visible"/>
+
+        </RadioGroup>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <Button
+        android:id="@+id/przycisk"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:text="Następne"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="#9000" />
+
+
+</LinearLayout>
