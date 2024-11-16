@@ -8,7 +8,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="50sp"
-        android:text="Witaj"
+        android:text="Witaj "
         android:textColor="@color/black"
         android:textSize="36sp"
         android:layout_gravity="center_horizontal"
@@ -19,22 +19,13 @@
     <Button
         android:layout_width="300sp"
         android:layout_height="70sp"
-        android:id="@+id/a_login"
+        android:id="@+id/d_logout"
         android:shape="rectangle"
         android:layout_gravity="center"
-        android:text="Zaloguj się"
+        android:text="Wyloguj się"
         android:background="#AAAAAA"
         android:textSize="30sp"/>
-    <Button
-        android:layout_width="300sp"
-        android:layout_height="70sp"
-        android:id="@+id/a_register"
-        android:shape="rectangle"
-        android:layout_gravity="center"
-        android:text="Zarejestruj się"
-        android:background="#AAAAAA"
-        android:textSize="30sp"
-        android:layout_marginTop="80sp"/>
+
 
 
 </FrameLayout>

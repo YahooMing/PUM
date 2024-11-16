@@ -9,7 +9,11 @@
         android:id="@+id/fragmentB"
         android:name="com.example.lista2.FragmentB"
         android:label="fragment_b"
-        tools:layout="@layout/fragment_b" />
+        tools:layout="@layout/fragment_b" >
+        <action
+            android:id="@+id/action_fragmentB_to_fragmentC"
+            app:destination="@id/fragmentC" />
+    </fragment>
     <fragment
         android:id="@+id/fragmentA2"
         android:name="com.example.lista2.FragmentA"
@@ -23,5 +27,29 @@
                 app:argType="integer"/>
 
         </action>
+        <action
+            android:id="@+id/action_fragmentA2_to_fragmentC"
+            app:destination="@id/fragmentC" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentC"
+        android:name="com.example.lista2.FragmentC"
+        android:label="fragment_c"
+        tools:layout="@layout/fragment_c" >
+        <action
+            android:id="@+id/action_fragmentC_to_fragmentB"
+            app:destination="@id/fragmentB" />
+        <action
+            android:id="@+id/action_fragmentC_to_fragmentD"
+            app:destination="@id/fragmentD" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentD"
+        android:name="com.example.lista2.FragmentD"
+        android:label="fragment_d"
+        tools:layout="@layout/fragment_d" >
+        <action
+            android:id="@+id/action_fragmentD_to_fragmentA2"
+            app:destination="@id/fragmentA2" />
     </fragment>
 </navigation>

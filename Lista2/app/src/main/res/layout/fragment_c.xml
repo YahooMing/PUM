@@ -8,7 +8,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="50sp"
-        android:text="Zarejestruj się"
+        android:text="Ekran logowania"
         android:textColor="@color/black"
         android:textSize="36sp"
         android:layout_gravity="center_horizontal"
@@ -17,40 +17,43 @@
         android:textStyle="bold"/>
 
     <EditText
+        android:id="@+id/c_login"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:padding="8dp"
-        android:gravity="center"
         android:layout_gravity="center"
-        android:text="login:"
         android:background="@drawable/border"
-        android:id="@+id/b_login"/>
+        android:gravity="center"
+        android:minHeight="48dp"
+        android:padding="8dp"
+        android:text="login:" />
+
     <EditText
+        android:id="@+id/c_haslo"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:padding="8dp"
+        android:layout_gravity="center"
         android:layout_marginTop="45dp"
-        android:gravity="center"
-        android:layout_gravity="center"
-        android:text="hasło:"
         android:background="@drawable/border"
-        android:id="@+id/b_haslo"/>
-    <EditText
+        android:gravity="center"
+        android:minHeight="48dp"
+        android:padding="8dp"
+        android:text="hasło:" />
+    <Button
+        android:id="@+id/c_log"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:padding="8dp"
-        android:layout_marginTop="90dp"
+        android:layout_marginTop="100dp"
         android:gravity="center"
         android:layout_gravity="center"
-        android:text="powtórz hasło:"
-        android:background="@drawable/border"
-        android:id="@+id/b_phaslo"/>
+        android:background="#AAAAAA"
+        android:text="Zaloguj się"
+        android:textSize="25sp"/>
 
     <Button
-        android:id="@+id/b_register"
+        android:id="@+id/c_register"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="140dp"
+        android:layout_marginTop="160dp"
         android:gravity="center"
         android:layout_gravity="center"
         android:background="#AAAAAA"
