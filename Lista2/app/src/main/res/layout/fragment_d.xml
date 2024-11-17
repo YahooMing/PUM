@@ -8,7 +8,8 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="50sp"
-        android:text="Witaj "
+        android:id="@+id/d_usrname"
+        android:text="Witaj username"
         android:textColor="@color/black"
         android:textSize="36sp"
         android:layout_gravity="center_horizontal"
