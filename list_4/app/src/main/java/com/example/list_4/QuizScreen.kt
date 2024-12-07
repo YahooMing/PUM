@@ -2,10 +2,13 @@ package com.example.list_4
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.unit.dp
 
 @Composable
@@ -23,7 +26,6 @@ fun QuizScreen(
             .padding(10.dp),
         verticalArrangement = Arrangement.SpaceBetween
     ) {
-        // Nagłówek z numerem pytania i pasek postępu
         Column(
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
@@ -38,42 +40,60 @@ fun QuizScreen(
             )
         }
 
-        // Treść pytania
         Card(
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(vertical = 16.dp),
-            elevation = CardDefaults.cardElevation(4.dp)
+            elevation = CardDefaults.cardElevation(4.dp),
+            shape = RectangleShape,
+            colors = CardDefaults.cardColors(containerColor = Color(0xFFE0E0E0))
         ) {
+
             Text(
                 text = question,
-                modifier = Modifier.padding(16.dp),
-                style = MaterialTheme.typography.bodyLarge // Zamiast body1
+                modifier = Modifier.padding(10.dp),
+                style = MaterialTheme.typography.bodyLarge
             )
         }
 
-        // Lista odpowiedzi (RadioButtons)
         Column {
-            answers.forEachIndexed { index, answer ->
-                Row(
+            Card(
+                colors = CardDefaults.cardColors(containerColor = Color(0xFFFFF9C4)),
+            ){
+                Column(
                     modifier = Modifier
-                        .fillMaxWidth()
-                        .clickable { onAnswerSelected(index) },
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    RadioButton(
-                        selected = selectedAnswer == index,
-                        onClick = { onAnswerSelected(index) }
-                    )
-                    Text(
-                        text = answer,
-                        modifier = Modifier.padding(start = 8.dp)
-                    )
+                        .padding(16.dp)
+                ){
+                    answers.forEachIndexed { index, answer ->
+                        Card(
+                            shape = RoundedCornerShape(8.dp),
+                            colors = CardDefaults.cardColors(containerColor = Color(0xFFE0E0E0)),
+                            modifier = Modifier.padding(bottom = 8.dp)
+                        ){
+                            Row(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .clickable { onAnswerSelected(index) },
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
+                                RadioButton(
+                                    selected = selectedAnswer == index,
+                                    onClick = { onAnswerSelected(index) }
+                                )
+                                Text(
+                                    text = answer,
+                                    modifier = Modifier.padding(start = 8.dp)
+                                )
+                            }
+                        }
+
+                    }
                 }
+
             }
+
         }
 
-        // Przycisk "Następne"
         Button(
             onClick = onNextClicked,
             modifier = Modifier
