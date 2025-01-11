@@ -67,6 +67,7 @@ dependencies {
     implementation(libs.androidx.lifecycle.runtime.compose)
 
     implementation(libs.androidx.room.runtime)
+    implementation(libs.androidx.navigation.compose)
     kapt(libs.androidx.room.compiler)
     implementation(libs.androidx.room.ktx)
 
